@@ -1,0 +1,50 @@
+{
+  "name": "dsh-token-usage-panel",
+  "version": "0.2.3",
+  "description": "DSH 对话区下方的用量面板：逐次调用的 token 与花费、峰谷计价、余额查询、日历热力图",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "usage",
+    "token",
+    "balance",
+    "heatmap"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [],
+      "external": []
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackRoe/dsh-token-usage-panel.git"
+  },
+  "homepage": "https://github.com/JackRoe/dsh-token-usage-panel#readme",
+  "bugs": {
+    "url": "https://github.com/JackRoe/dsh-token-usage-panel/issues"
+  },
+  "author": "JackRoe",
+  "license": "MIT"
+}

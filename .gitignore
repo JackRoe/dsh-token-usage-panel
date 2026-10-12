@@ -1,0 +1,18 @@
+# 依赖（本插件 Host 半零依赖，浏览器半是手写 bundle，正常不会出现）
+node_modules/
+
+# 日志与临时文件
+*.log
+*.tmp
+*.bak
+*~
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 账本与配置不属于仓库内容：它们在 $DSH_HOME/usage-panel/ 下，不在插件目录
+ledger.json
+config.json

@@ -1,0 +1,13 @@
+# dsh-token-usage-panel —— DSH bundle patch
+#
+# 这是插件的“挂载声明”。DSH 启动时按 bundle 层栈叠加各插件 patch，
+# 本文件把用量面板的 Host 半插入 Web profile 的配置树；Host 半的
+# package.json 声明了 dsh.client，浏览器半（对话区下方状态条）会由
+# dsh-client-modules 自动装配上屏。
+#
+# 安装：
+#   dsh plugin --profile desktop add dsh-token-usage-panel
+#   或本地开发：dsh plugin --profile desktop add link:<本目录绝对路径>
+- insert:
+    - id: usage-panel
+      name: dsh-token-usage-panel
